@@ -188,14 +188,14 @@ section .content{
 section .title{
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 section .title span{
   color: #0E2431;
   font-size: 30px;
   font-weight: 600;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
 }
 section .title span::before,
 section .title span::after{
@@ -228,7 +228,7 @@ section .title span::after{
 section  .topic{
   color: #0E2431;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 .about-details .right p{
@@ -255,6 +255,25 @@ section .button button:hover{
   background-color: #fff;
   color: #5f22d9;
 }
+.card {
+  border: 1px solid #ccc;
+  width: 400px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+
 
  /* My Skills CSS */
  .skills{
@@ -312,6 +331,9 @@ section .button button:hover{
 }
 
 /* My Projects CSS */
+.projects {
+  background: #ffffff;
+}
 .projects .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -333,7 +355,7 @@ section .button button:hover{
 
 .projects .card-content {
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .projects .card-title {
@@ -416,8 +438,8 @@ section .button button:hover{
 }
 /* Contact Me CSS */
 .contact{
-  background: #FFF;
-  padding-top: 100%x;
+  background: #ffffff;
+  padding-top: 50%x;
   padding-bottom: 100px;
 }
 .contact .content{

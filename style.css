@@ -255,25 +255,72 @@ section .button button:hover{
   background-color: #fff;
   color: #5f22d9;
 }
-.card {
-  border: 1px solid #ccc;
-  width: 400px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* CSS for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay background color */
 }
 
-.card-body {
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
   padding: 20px;
+  border: 0px solid #888;
+  width: 65%; /* Adjust the width of the modal content */
+  max-height: 50%; /* Adjust the maximum height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+.modal-content h2 {
+  padding-top: 10px;
+  text-align: center;
+}
+.mcard-row {
+  display: flex;
+  flex-wrap: nowrap; /* Ensures the cards stay in a row */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  gap: 10px; /* Adjust the gap between cards */
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
+.m-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  align-items: center;
+  text-align: center;
+  width: 450px; /* Adjust card width as needed */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.m-card p{
+  text-align: center;
+}
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
  /* My Skills CSS */
  .skills{
@@ -287,47 +334,63 @@ section .button button:hover{
    justify-content: space-between;
    align-items: center;
  }
+ .skills-details .topic{
+  width: 100%;
+  text-align: center;
+}
  .skills-details .text{
-   width: 50%;
+   width: 100%;
+   
  }
  .skills-details p{
    color: #0E2431;
    text-align: justify;
+   align-items: center;
  }
-.skills .skills-details .experience{
+ .skill-cards {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 0 10px;
-}
-.skills-details .experience .num{
-  color: #0E2431;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: #0E2431;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 10px;
 }
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 10px 0;
-  padding-bottom: 12px;
+
+/* Existing CSS for s-card */
+.s-card {
+  border: 1px solid #F0F8FF;
+  border-radius: 8px;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  margin: 10px; /* Add margin for spacing between cards */
 }
-.skills-details .boxes .topic{
-  font-size: 20px;
-  color: #5f22d9;
+
+.s-card i {
+  /* Adjust the styles for the icon */
+  font-size: 90px;
+  margin-bottom: 10px;
+  color: #5f22d9;;
+  
 }
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #5f22d9;
+
+.s-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.s-card-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Additional CSS for grid view */
+.s-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust the width for responsiveness */
+  gap: 20px; /* Add gap between cards */
+  justify-items: center; /* Center items in the grid */
 }
 
 /* My Projects CSS */
@@ -439,12 +502,12 @@ section .button button:hover{
 /* Contact Me CSS */
 .contact{
   background: #ffffff;
-  padding-top: 50%x;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 160px;
 }
 .contact .content{
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .contact .text{
   width: 80%;
@@ -459,7 +522,7 @@ section .button button:hover{
 /* Footer CSS */
 footer{
   background: #5f22d9;
-  padding: 15px 0;
+  padding: 25px 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }

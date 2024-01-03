@@ -283,6 +283,7 @@ section .button button:hover{
 }
 .mcard-row {
   display: flex;
+  justify-content: center;
   flex-wrap: nowrap; /* Ensures the cards stay in a row */
   overflow-x: auto; /* Enable horizontal scrolling if needed */
   gap: 10px; /* Adjust the gap between cards */
@@ -293,7 +294,6 @@ section .button button:hover{
 .m-card {
   border: 1px solid #ccc;
   border-radius: 8px;
-  align-items: center;
   text-align: center;
   width: 450px; /* Adjust card width as needed */
   padding: 20px;

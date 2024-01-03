@@ -272,6 +272,7 @@ section .button button:hover{
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
+  justify-content: center;
   border: 0px solid #888;
   width: 65%; /* Adjust the width of the modal content */
   max-height: 50%; /* Adjust the maximum height of the modal */

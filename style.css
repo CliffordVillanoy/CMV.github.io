@@ -542,8 +542,8 @@ footer .text span a:hover{
 /* Scroll TO Top Button CSS */
 .scroll-button a{
   position: fixed;
-  bottom: 75px;
-  right: 20px;
+  bottom: 95px;
+  right: 30px;
   color: #fff;
   background: #5f22d9;
   padding: 12px 12px;;
@@ -578,6 +578,17 @@ footer .text span a:hover{
   .services .boxes .box{
     margin: 20px 0;
     width: calc(100% / 2 - 20px);
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .mcard-row {
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: flex-start; /* Align cards to the start */
+    padding: 10px; /* Adjust padding for mobile view */
+    margin-top: 10px; /* Reduce top margin for mobile view */
+    overflow-x: hidden; /* Disable horizontal scrolling on small screens */
   }
 }
 @media (max-width: 900px) {
